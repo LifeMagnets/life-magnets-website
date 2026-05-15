@@ -20,8 +20,12 @@ export default function BoothCallout({ href, badgeColor, confettiColors }: Props
     const x = (rect.left + rect.width / 2) / window.innerWidth
     const y = (rect.top + rect.height / 2) / window.innerHeight
     confetti({
-      particleCount: 100,
-      spread: 80,
+      particleCount: 220,
+      spread: 100,
+      startVelocity: 42,
+      decay: 0.91,
+      gravity: 0.8,
+      scalar: 1.0,
       origin: { x, y },
       colors: confettiColors,
     })
