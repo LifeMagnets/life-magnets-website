@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import ProductGrid from '@/components/ProductGrid'
 
 const subcategories = [
   { slug: 'running-races', label: 'Running & Races' },
@@ -99,24 +99,6 @@ const SECTION_TITLE: React.CSSProperties = {
   marginTop: 40,
 }
 
-function ProductCard({ product }: { product: Product }) {
-  return (
-    <div style={{ background: 'white', borderRadius: 16, overflow: 'hidden', boxShadow: '0 2px 12px rgba(0,0,0,0.07)', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ background: '#f5f5f3', padding: 24, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <div style={{ position: 'relative', width: 160, height: 160, borderRadius: 8, overflow: 'hidden', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}>
-          <Image src={product.image} alt={product.name} fill style={{ objectFit: 'cover' }} unoptimized />
-        </div>
-      </div>
-      <div style={{ padding: '18px 20px 20px', display: 'flex', flexDirection: 'column', flex: 1 }}>
-        <h2 style={{ fontSize: '1rem', fontWeight: 800, color: '#1a3a40', marginBottom: 4 }}>{product.name}</h2>
-        <p style={{ fontSize: '0.82rem', color: '#6a8e95', marginBottom: 16, flex: 1 }}>2×2 square · handcrafted</p>
-        <Link href="/custom" className="btn" style={{ display: 'block', textAlign: 'center', padding: '10px 0', background: '#aa8860', color: 'white', fontWeight: 700, fontSize: '0.88rem', textDecoration: 'none', borderRadius: 10 }}>
-          Order This Design
-        </Link>
-      </div>
-    </div>
-  )
-}
 
 export default async function SportsAdventurePage({
   searchParams,
@@ -173,9 +155,7 @@ export default async function SportsAdventurePage({
           {showRunning && (
             <>
               <div style={{ ...SECTION_TITLE, marginTop: 24 }}>Running</div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 24 }}>
-                {filtered.filter(p => p.group === 'running').map(p => <ProductCard key={p.id} product={p} />)}
-              </div>
+              <ProductGrid products={filtered.filter(p => p.group === 'running')} />
               <div style={{ ...SECTION_TITLE }}>Triathlon</div>
               <div style={{ background: 'white', borderRadius: 14, padding: '32px 28px', textAlign: 'center', border: '2px dashed rgba(170,136,96,0.25)' }}>
                 <p style={{ color: '#6a8e95', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: 20 }}>
@@ -192,9 +172,7 @@ export default async function SportsAdventurePage({
           {showSurfing && (
             <>
               <div style={{ ...SECTION_TITLE, marginTop: showRunning ? 40 : 24 }}>Surfing</div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 24 }}>
-                {filtered.filter(p => p.group === 'surfing').map(p => <ProductCard key={p.id} product={p} />)}
-              </div>
+              <ProductGrid products={filtered.filter(p => p.group === 'surfing')} />
             </>
           )}
 
@@ -202,9 +180,7 @@ export default async function SportsAdventurePage({
           {showCamping && (
             <>
               <div style={{ ...SECTION_TITLE, marginTop: showRunning || showSurfing ? 40 : 24 }}>Camping & Outdoors</div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 24 }}>
-                {filtered.filter(p => p.group === 'camping').map(p => <ProductCard key={p.id} product={p} />)}
-              </div>
+              <ProductGrid products={filtered.filter(p => p.group === 'camping')} />
             </>
           )}
 
