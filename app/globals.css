@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --teal: #0097a7;
+  --teal-light: #26c6da;
+  --teal-bg: #d4eef5;
+  --navy: #1a3a6b;
+  --orange: #c0392b;
+  --gold: #e8a020;
+  --text-dark: #1a3a40;
+  --text-mid: #4a7a84;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-dark);
+  background: #ffffff;
+}
+
+.btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
