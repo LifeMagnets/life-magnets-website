@@ -71,12 +71,9 @@ export default function EventsPage() {
               />
             </div>
 
-            {/* Top right — placeholder */}
-            <div style={{ background: '#e8e4de', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 8 }}>
-              <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'rgba(91,163,172,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ fontSize: '1.2rem' }}>📷</span>
-              </div>
-              <span style={{ fontSize: '0.78rem', color: '#6a8e95', fontWeight: 600 }}>Photo coming soon</span>
+            {/* Top right — wedding booth */}
+            <div style={{ position: 'relative', overflow: 'hidden' }}>
+              <img src="/weddingbooth.png" alt="Life Magnets Co. wedding booth" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
             </div>
 
             {/* Bottom right — placeholder */}
