@@ -5,10 +5,10 @@ const categories = [
     slug: 'home',
     label: 'Home',
     tagline: 'Creative, practical, or just fun designs for your home or office.',
-    accent: '#e8734a',
-    bg: '#fff4ef',
-    border: 'rgba(232,115,74,0.25)',
-    dot: 'rgba(232,115,74,0.15)',
+    accent: '#c8675d',
+    bg: '#fdf2f0',
+    border: 'rgba(200,103,93,0.25)',
+    dot: 'rgba(200,103,93,0.15)',
     subcategories: [],
     customizable: true,
   },
@@ -16,10 +16,10 @@ const categories = [
     slug: 'nature-travel',
     label: 'Nature & Travel',
     tagline: 'Mountains, beaches, and all the beautiful places that call you back.',
-    accent: '#0097a7',
+    accent: '#5ba3ac',
     bg: '#e8f7f9',
-    border: 'rgba(0,151,167,0.25)',
-    dot: 'rgba(0,151,167,0.12)',
+    border: 'rgba(91,163,172,0.25)',
+    dot: 'rgba(91,163,172,0.12)',
     subcategories: [
       { slug: 'beach', label: 'Beach' },
       { slug: 'hiking-mountains', label: 'Hiking & Mountains' },
@@ -31,10 +31,10 @@ const categories = [
     slug: 'holidays-seasons',
     label: 'Holidays & Seasons',
     tagline: 'Birthdays, Christmas, Vacation, and all the moments in between',
-    accent: '#f0b429',
-    bg: '#fffbef',
-    border: 'rgba(240,180,41,0.3)',
-    dot: 'rgba(240,180,41,0.15)',
+    accent: '#e8c46e',
+    bg: '#fdf8ec',
+    border: 'rgba(232,196,110,0.3)',
+    dot: 'rgba(232,196,110,0.15)',
     subcategories: [],
     customizable: true,
   },
@@ -42,7 +42,7 @@ const categories = [
     slug: 'inspirational',
     label: 'Inspirational',
     tagline: 'Words and designs to brighten any fridge, locker, or workspace',
-    accent: '#26c6da',
+    accent: '#7ec4cd',
     bg: '#e0f8fb',
     border: 'rgba(38,198,218,0.25)',
     dot: 'rgba(38,198,218,0.15)',
@@ -54,7 +54,7 @@ const categories = [
     label: 'Sports & Adventure',
     tagline: 'For the athletes, competitors, and adventure-seekers in your life',
     accent: '#aa8860',
-    bg: '#f8f0e8',
+    bg: '#f5ede8',
     border: 'rgba(170,136,96,0.25)',
     dot: 'rgba(170,136,96,0.12)',
     subcategories: [
@@ -66,7 +66,7 @@ const categories = [
     slug: 'kids',
     label: 'Kids',
     tagline: 'Playful and creative magnets that kids (and parents) will love.',
-    accent: '#4a7a84',
+    accent: '#6a8e95',
     bg: '#eaf4f6',
     border: 'rgba(74,122,132,0.25)',
     dot: 'rgba(74,122,132,0.12)',
@@ -80,11 +80,11 @@ export default function ShopPage() {
     <div>
 
       {/* Header + Category grid — single continuous gradient */}
-      <section style={{ background: 'linear-gradient(to bottom, #f5e6c8 0%, #dfc49a 55%, #aa8860 100%)', padding: '64px 16px 80px' }}>
+      <section style={{ background: 'linear-gradient(to bottom, #f5e9d0 0%, #dfc49a 55%, #aa8860 100%)', padding: '64px 16px 80px' }}>
         <div style={{ maxWidth: 640, margin: '0 auto', textAlign: 'center', marginBottom: 56 }}>
-          <div style={{ fontSize: '0.8rem', fontWeight: 800, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#0097a7', marginBottom: 14 }}>Pre-Made Designs</div>
+          <div style={{ fontSize: '0.8rem', fontWeight: 800, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#5ba3ac', marginBottom: 14 }}>Pre-Made Designs</div>
           <h1 style={{ fontSize: '2.6rem', fontWeight: 800, color: '#1a3a40', lineHeight: 1.15, marginBottom: 16 }}>Shop by Category</h1>
-          <p style={{ fontSize: '1.05rem', color: '#4a7a84', lineHeight: 1.7 }}>
+          <p style={{ fontSize: '1.05rem', color: '#6a8e95', lineHeight: 1.7 }}>
             Browse our handcrafted magnet collections. Order online and we'll ship straight to you — or wrapped as a gift to someone you love.
           </p>
         </div>

@@ -97,16 +97,16 @@ export default function CategoryCard({ slug, label, tagline, accent, bg, border,
               <svg viewBox="0 0 48 34" preserveAspectRatio="none" style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '100%', display: 'block' }}>
                 <defs>
                   <linearGradient id="wg1" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="rgba(178,235,242,0)" />
-                    <stop offset="100%" stopColor="rgba(178,235,242,0.95)" />
+                    <stop offset="0%" stopColor="rgba(200,235,238,0)" />
+                    <stop offset="100%" stopColor="rgba(200,235,238,0.95)" />
                   </linearGradient>
                   <linearGradient id="wg2" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="rgba(77,208,225,0)" />
-                    <stop offset="100%" stopColor="rgba(77,208,225,0.9)" />
+                    <stop offset="0%" stopColor="rgba(126,196,205,0)" />
+                    <stop offset="100%" stopColor="rgba(126,196,205,0.9)" />
                   </linearGradient>
                   <linearGradient id="wg3" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="rgba(0,151,167,0)" />
-                    <stop offset="100%" stopColor="rgba(0,151,167,0.8)" />
+                    <stop offset="0%" stopColor="rgba(91,163,172,0)" />
+                    <stop offset="100%" stopColor="rgba(91,163,172,0.8)" />
                   </linearGradient>
                 </defs>
                 <path d="M0,6 C8,0 16,14 24,6 C32,0 40,12 48,6 L48,34 L0,34 Z" fill="url(#wg1)" />
@@ -139,7 +139,7 @@ export default function CategoryCard({ slug, label, tagline, accent, bg, border,
           <div style={{ fontWeight: 800, color: accent, fontSize: '0.95rem', marginBottom: 8 }}>
             ✦ Customizable Options
           </div>
-          <p style={{ fontSize: '0.84rem', color: '#4a7a84', lineHeight: 1.6, margin: '0 0 12px' }}>
+          <p style={{ fontSize: '0.84rem', color: '#6a8e95', lineHeight: 1.6, margin: '0 0 12px' }}>
             Designs in this category can be personalized — choose a background template, add your own photo, or request custom text.
           </p>
           <Link
@@ -153,7 +153,7 @@ export default function CategoryCard({ slug, label, tagline, accent, bg, border,
       )}
 
       <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1a3a40', marginBottom: 10, lineHeight: 1.2 }}>{label}</h2>
-      <p style={{ fontSize: '0.95rem', color: '#4a7a84', lineHeight: 1.6, marginBottom: 24, flex: 1 }}>{tagline}</p>
+      <p style={{ fontSize: '0.95rem', color: '#6a8e95', lineHeight: 1.6, marginBottom: 24, flex: 1 }}>{tagline}</p>
 
       {/* Browse button */}
       <button

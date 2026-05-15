@@ -32,7 +32,7 @@ const SECTION_TITLE: React.CSSProperties = {
   color: '#1a3a40',
   letterSpacing: '0.04em',
   textTransform: 'uppercase',
-  borderBottom: '2px solid rgba(0,151,167,0.25)',
+  borderBottom: '2px solid rgba(91,163,172,0.25)',
   paddingBottom: 10,
   marginBottom: 20,
   marginTop: 40,
@@ -48,7 +48,7 @@ function ProductCard({ product }: { product: Product }) {
       </div>
       <div style={{ padding: '18px 20px 20px', display: 'flex', flexDirection: 'column', flex: 1 }}>
         <h2 style={{ fontSize: '1rem', fontWeight: 800, color: '#1a3a40', marginBottom: 4 }}>{product.name}</h2>
-        <p style={{ fontSize: '0.82rem', color: '#4a7a84', marginBottom: 16, flex: 1 }}>2×2 square · handcrafted</p>
+        <p style={{ fontSize: '0.82rem', color: '#6a8e95', marginBottom: 16, flex: 1 }}>2×2 square · handcrafted</p>
         <Link href="/custom" className="btn" style={{ display: 'block', textAlign: 'center', padding: '10px 0', background: '#aa8860', color: 'white', fontWeight: 700, fontSize: '0.88rem', textDecoration: 'none', borderRadius: 10 }}>
           Order This Design
         </Link>
@@ -76,7 +76,7 @@ export default async function SportsAdventurePage({
     <div>
 
       {/* Header */}
-      <section style={{ background: 'linear-gradient(to bottom, #f8f0e8 0%, #f5e6c8 100%)', padding: '64px 16px 48px', textAlign: 'center' }}>
+      <section style={{ background: 'linear-gradient(to bottom, #f5ede8 0%, #f5e9d0 100%)', padding: '64px 16px 48px', textAlign: 'center' }}>
         <div style={{ maxWidth: 640, margin: '0 auto' }}>
           <Link href="/shop" style={{ display: 'inline-block', marginBottom: 24, color: '#aa8860', fontWeight: 700, fontSize: '0.9rem', textDecoration: 'none' }}>
             ← Back to Shop
@@ -85,20 +85,20 @@ export default async function SportsAdventurePage({
           <h1 style={{ fontSize: '2.6rem', fontWeight: 800, color: '#1a3a40', lineHeight: 1.15, marginBottom: 16 }}>
             Sports & Adventure{activeSub ? ` — ${activeSub.label}` : ''}
           </h1>
-          <p style={{ fontSize: '1.05rem', color: '#4a7a84', lineHeight: 1.7 }}>
+          <p style={{ fontSize: '1.05rem', color: '#6a8e95', lineHeight: 1.7 }}>
             Celebrate your finish line. Race distance magnets handcrafted and shipped straight to you.
           </p>
         </div>
       </section>
 
       {/* Subcategory filter tabs */}
-      <div style={{ background: '#f8f0e8', borderBottom: '1px solid rgba(170,136,96,0.2)', padding: '0 16px' }}>
+      <div style={{ background: '#f5ede8', borderBottom: '1px solid rgba(170,136,96,0.2)', padding: '0 16px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', display: 'flex', gap: 4, overflowX: 'auto', paddingBottom: 1 }}>
-          <Link href="/shop/sports-adventure" style={{ display: 'inline-block', padding: '14px 18px', fontWeight: sub ? 600 : 800, fontSize: '0.9rem', textDecoration: 'none', whiteSpace: 'nowrap', color: sub ? '#4a7a84' : '#aa8860', borderBottom: sub ? 'none' : '3px solid #aa8860' }}>
+          <Link href="/shop/sports-adventure" style={{ display: 'inline-block', padding: '14px 18px', fontWeight: sub ? 600 : 800, fontSize: '0.9rem', textDecoration: 'none', whiteSpace: 'nowrap', color: sub ? '#6a8e95' : '#aa8860', borderBottom: sub ? 'none' : '3px solid #aa8860' }}>
             All
           </Link>
           {subcategories.map(s => (
-            <Link key={s.slug} href={`/shop/sports-adventure?sub=${s.slug}`} style={{ display: 'inline-block', padding: '14px 18px', fontWeight: sub === s.slug ? 800 : 600, fontSize: '0.9rem', textDecoration: 'none', whiteSpace: 'nowrap', color: sub === s.slug ? '#aa8860' : '#4a7a84', borderBottom: sub === s.slug ? '3px solid #aa8860' : 'none' }}>
+            <Link key={s.slug} href={`/shop/sports-adventure?sub=${s.slug}`} style={{ display: 'inline-block', padding: '14px 18px', fontWeight: sub === s.slug ? 800 : 600, fontSize: '0.9rem', textDecoration: 'none', whiteSpace: 'nowrap', color: sub === s.slug ? '#aa8860' : '#6a8e95', borderBottom: sub === s.slug ? '3px solid #aa8860' : 'none' }}>
               {s.label}
             </Link>
           ))}
@@ -126,7 +126,7 @@ export default async function SportsAdventurePage({
             <>
               <div style={{ ...SECTION_TITLE }}>Triathlon</div>
               <div style={{ background: 'white', borderRadius: 14, padding: '32px 28px', textAlign: 'center', border: '2px dashed rgba(170,136,96,0.25)' }}>
-                <p style={{ color: '#4a7a84', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: 20 }}>
+                <p style={{ color: '#6a8e95', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: 20 }}>
                   Triathlon designs are coming soon. In the meantime, order a custom magnet to celebrate your race.
                 </p>
                 <Link href="/custom" style={{ display: 'inline-block', padding: '11px 24px', background: '#aa8860', color: 'white', fontWeight: 700, fontSize: '0.88rem', textDecoration: 'none', borderRadius: 10 }}>
@@ -140,7 +140,7 @@ export default async function SportsAdventurePage({
           {showTeamSports && !showRunning && (
             <div style={{ maxWidth: 540, margin: '0 auto', textAlign: 'center', padding: '40px 0' }}>
               <h2 style={{ color: '#1a3a40', fontSize: '1.5rem', fontWeight: 800, marginBottom: 12 }}>Coming Soon</h2>
-              <p style={{ color: '#4a7a84', fontSize: '1rem', lineHeight: 1.7, marginBottom: 32 }}>
+              <p style={{ color: '#6a8e95', fontSize: '1rem', lineHeight: 1.7, marginBottom: 32 }}>
                 We're adding team sports designs to this collection. In the meantime, you can order a custom magnet with your own photo.
               </p>
               <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>

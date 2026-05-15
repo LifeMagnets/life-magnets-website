@@ -25,9 +25,9 @@ const included = [
 ]
 
 const addons = [
-  { name: 'Backdrop + Props', desc: 'Life Magnets Co. brings, sets up, and styles a color-themed backdrop with a curated prop collection, giving guests a fun creative setup to photograph themselves with their own phones before uploading', price: '$275' },
-  { name: 'Guest Memory Photo Book', desc: 'Hardcover photo book featuring a variety of photos that were turned into magnets at your reception — get a surprise glimpse into your special day that your guests captured themselves. Designed and mailed direct to the couple. Tracking info within 2 weeks after the reception. Note: all photos are guest-taken phone photos, not professional wedding photography.', price: '$225' },
-  { name: 'Extra Magnets', desc: 'Guests ordering beyond their included amount pay directly at pickup via card reader at the booth', price: '$10 each' },
+  { name: 'Backdrop + Props', desc: 'Life Magnets Co. brings and sets up a color-themed backdrop with a curated prop collection, giving guests a fun creative setup to photograph themselves with their own phones before uploading. (Any floral arrangements added to this are not provided by or set up by Life Magnets Co.)', price: '$275' },
+  { name: 'Guest Memory Photo Book', desc: 'Hardcover photo book featuring a variety of photos that were turned into magnets at your reception — get a surprise glimpse into your special day that your guests captured themselves. Designed and mailed direct to the couple. Tracking info provided within 2 weeks after the reception. Note: all photos are guest-taken phone photos, not professional wedding photography.', price: '$225' },
+  { name: 'Extra Magnets', desc: 'Guests ordering beyond their included amount pay Life Magnets directly at the booth at time of placing their order', price: '$10 each' },
   { name: 'Extended Time', desc: 'Billed in 30-minute increments beyond prepaid package time', price: '$50/half hour' },
   { name: 'Peak Season Premium', desc: 'May, June, September, October Saturdays', price: '+$150' },
   { name: 'Rush Booking', desc: 'Less than 2 weeks notice', price: '+$200' },
@@ -45,6 +45,8 @@ const notes = [
   'These are not professional wedding photographs — they are candid, personal moments captured by your guests themselves',
   'Photo quality will vary by phone and camera — this is part of the charm and authenticity of the experience',
   'The Backdrop + Props add-on gives guests a fun, styled setting to photograph themselves before uploading, encouraging more creative and memorable submissions',
+  'If you order the Backdrop + Props add-on and decide you would like your florist or décor coordinator to add personal touches to the backdrop we bring, please factor in any extra time that may be needed — if their work requires Life Magnets Co. to extend setup time to accommodate, the Extended Time add-on rate will apply',
+  'The time allotment per package cannot be split up and can only be run as one continuous block of time',
   'Life Magnets Co. operates completely independently from your wedding photographer and does not coincide with professional photography coverage',
 ]
 
@@ -67,7 +69,7 @@ function SectionHeader({ children }: { children: React.ReactNode }) {
 
 function Card({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ background: 'white', borderRadius: 12, boxShadow: '0 2px 14px rgba(0,0,0,0.06)', border: '1px solid rgba(0,151,167,0.13)', overflow: 'hidden', marginBottom: 24 }}>
+    <div style={{ background: 'white', borderRadius: 12, boxShadow: '0 2px 14px rgba(0,0,0,0.06)', border: '1px solid rgba(91,163,172,0.13)', overflow: 'hidden', marginBottom: 24 }}>
       {children}
     </div>
   )
@@ -81,16 +83,16 @@ function PricingTable({ rows }: { rows: typeof packageA }) {
       <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 520 }}>
         <thead>
           <tr>
-            <th style={{ padding: '10px 12px', textAlign: 'left', fontSize: '0.8rem', color: '#4a7a84', fontWeight: 700, borderBottom: '2px solid #eef0ee', width: '30%' }} />
+            <th style={{ padding: '10px 12px', textAlign: 'left', fontSize: '0.8rem', color: '#6a8e95', fontWeight: 700, borderBottom: '2px solid #eef0ee', width: '30%' }} />
             {colHeads.map(h => (
-              <th key={h} style={{ padding: '10px 12px', textAlign: 'center', fontSize: '0.78rem', color: 'white', fontWeight: 700, background: '#0097a7', borderBottom: '2px solid #eef0ee' }}>{h}</th>
+              <th key={h} style={{ padding: '10px 12px', textAlign: 'center', fontSize: '0.78rem', color: 'white', fontWeight: 700, background: '#5ba3ac', borderBottom: '2px solid #eef0ee' }}>{h}</th>
             ))}
           </tr>
         </thead>
         <tbody>
           {rows.map((row, i) => (
             <tr key={row.size} style={{ background: i % 2 === 0 ? '#f8f7f4' : 'white' }}>
-              <td style={{ padding: '12px', fontSize: '0.88rem', fontWeight: 700, color: '#0097a7', borderBottom: '1px solid #eef0ee' }}>{row.size}</td>
+              <td style={{ padding: '12px', fontSize: '0.88rem', fontWeight: 700, color: '#5ba3ac', borderBottom: '1px solid #eef0ee' }}>{row.size}</td>
               {[row.t75, row.t125, row.t175, row.t250].map((p, j) => (
                 <td key={j} style={{ padding: '12px', textAlign: 'center', fontSize: '0.9rem', fontWeight: 700, color: '#1a3a40', borderBottom: '1px solid #eef0ee' }}>{p}</td>
               ))}
@@ -109,14 +111,14 @@ export default function WeddingBoothPage() {
       {/* Header */}
       <section style={{ padding: '64px 16px 56px', textAlign: 'center' }}>
         <div style={{ maxWidth: 680, margin: '0 auto' }}>
-          <Link href="/events" style={{ display: 'inline-block', marginBottom: 24, color: '#0097a7', fontWeight: 700, fontSize: '0.9rem', textDecoration: 'none' }}>
+          <Link href="/events" style={{ display: 'inline-block', marginBottom: 24, color: '#5ba3ac', fontWeight: 700, fontSize: '0.9rem', textDecoration: 'none' }}>
             ← Back to Events
           </Link>
-          <div style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#0097a7', marginBottom: 14 }}>Live Booth Experience</div>
+          <div style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#5ba3ac', marginBottom: 14 }}>Live Booth Experience</div>
           <h1 style={{ fontSize: '2.6rem', fontWeight: 800, color: '#1a3a40', lineHeight: 1.15, marginBottom: 16 }}>
             Wedding Packages & Pricing
           </h1>
-          <p style={{ fontSize: '1.05rem', color: '#4a7a84', lineHeight: 1.7 }}>
+          <p style={{ fontSize: '1.05rem', color: '#6a8e95', lineHeight: 1.7 }}>
             Give your guests an extra touch of fun at your wedding reception.
           </p>
         </div>
@@ -141,11 +143,11 @@ export default function WeddingBoothPage() {
           {/* Package A */}
           <Card>
             <SectionHeader>Package A — The Keepsake</SectionHeader>
-            <p style={{ padding: '14px 20px 4px', fontSize: '0.85rem', color: '#4a7a84', fontStyle: 'italic', margin: 0 }}>
+            <p style={{ padding: '14px 20px 4px', fontSize: '0.85rem', color: '#6a8e95', fontStyle: 'italic', margin: 0 }}>
               One magnet per guest · 2 hours · Guest's choice of size if both sizes selected
             </p>
             <PricingTable rows={packageA} />
-            <p style={{ padding: '0 20px 18px', fontSize: '0.82rem', color: '#4a7a84', margin: 0 }}>
+            <p style={{ padding: '0 20px 18px', fontSize: '0.82rem', color: '#6a8e95', margin: 0 }}>
               See <em>Always Included in Every Package</em> below for the full list of what comes with every booking.
             </p>
           </Card>
@@ -153,11 +155,11 @@ export default function WeddingBoothPage() {
           {/* Package B */}
           <Card>
             <SectionHeader>Package B — The Double Memory</SectionHeader>
-            <p style={{ padding: '14px 20px 4px', fontSize: '0.85rem', color: '#4a7a84', fontStyle: 'italic', margin: 0 }}>
+            <p style={{ padding: '14px 20px 4px', fontSize: '0.85rem', color: '#6a8e95', fontStyle: 'italic', margin: 0 }}>
               Two magnets per guest · 3 hours · Guest's choice of size if both sizes selected
             </p>
             <PricingTable rows={packageB} />
-            <p style={{ padding: '0 20px 18px', fontSize: '0.82rem', color: '#4a7a84', margin: 0 }}>
+            <p style={{ padding: '0 20px 18px', fontSize: '0.82rem', color: '#6a8e95', margin: 0 }}>
               See <em>Always Included in Every Package</em> below for the full list of what comes with every booking.
             </p>
           </Card>
@@ -168,7 +170,7 @@ export default function WeddingBoothPage() {
             <div style={{ padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: 10 }}>
               {included.map((item, i) => (
                 <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
-                  <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#0097a7', flexShrink: 0, marginTop: 7 }} />
+                  <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#5ba3ac', flexShrink: 0, marginTop: 7 }} />
                   <span style={{ fontSize: '0.9rem', color: '#1a3a40', lineHeight: 1.65 }}>{item}</span>
                 </div>
               ))}
@@ -183,9 +185,9 @@ export default function WeddingBoothPage() {
                 <div key={a.name} style={{ display: 'flex', gap: 16, justifyContent: 'space-between', alignItems: 'flex-start', padding: '14px 0', borderBottom: i < addons.length - 1 ? '1px solid #eef0ee' : 'none' }}>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#1a3a40', marginBottom: 4 }}>{a.name}</div>
-                    <div style={{ fontSize: '0.85rem', color: '#4a7a84', lineHeight: 1.6 }}>{a.desc}</div>
+                    <div style={{ fontSize: '0.85rem', color: '#6a8e95', lineHeight: 1.6 }}>{a.desc}</div>
                   </div>
-                  <div style={{ fontWeight: 800, fontSize: '0.95rem', color: '#0097a7', whiteSpace: 'nowrap', paddingLeft: 16 }}>{a.price}</div>
+                  <div style={{ fontWeight: 800, fontSize: '0.95rem', color: '#5ba3ac', whiteSpace: 'nowrap', paddingLeft: 16 }}>{a.price}</div>
                 </div>
               ))}
             </div>
@@ -198,15 +200,15 @@ export default function WeddingBoothPage() {
               <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: 16 }}>
                 <thead>
                   <tr>
-                    <th style={{ padding: '10px 12px', textAlign: 'left', fontSize: '0.8rem', color: 'white', fontWeight: 700, background: '#0097a7', borderRadius: '6px 0 0 6px' }}>Distance from Life Magnets Co.</th>
-                    <th style={{ padding: '10px 12px', textAlign: 'left', fontSize: '0.8rem', color: 'white', fontWeight: 700, background: '#0097a7', borderRadius: '0 6px 6px 0' }}>Rate</th>
+                    <th style={{ padding: '10px 12px', textAlign: 'left', fontSize: '0.8rem', color: 'white', fontWeight: 700, background: '#5ba3ac', borderRadius: '6px 0 0 6px' }}>Distance from Life Magnets Co.</th>
+                    <th style={{ padding: '10px 12px', textAlign: 'left', fontSize: '0.8rem', color: 'white', fontWeight: 700, background: '#5ba3ac', borderRadius: '0 6px 6px 0' }}>Rate</th>
                   </tr>
                 </thead>
                 <tbody>
                   {travel.map((t, i) => (
                     <tr key={t.range} style={{ background: i % 2 === 0 ? '#f8f7f4' : 'white' }}>
                       <td style={{ padding: '12px', fontSize: '0.88rem', fontWeight: 700, color: '#1a3a40', borderBottom: '1px solid #eef0ee' }}>{t.range}</td>
-                      <td style={{ padding: '12px', fontSize: '0.88rem', color: '#4a7a84', borderBottom: '1px solid #eef0ee' }}>{t.rate}</td>
+                      <td style={{ padding: '12px', fontSize: '0.88rem', color: '#6a8e95', borderBottom: '1px solid #eef0ee' }}>{t.rate}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -220,7 +222,7 @@ export default function WeddingBoothPage() {
             <div style={{ padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: 10 }}>
               {notes.map((note, i) => (
                 <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
-                  <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#0097a7', flexShrink: 0, marginTop: 7 }} />
+                  <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#5ba3ac', flexShrink: 0, marginTop: 7 }} />
                   <span style={{ fontSize: '0.9rem', color: '#1a3a40', lineHeight: 1.65 }}>{note}</span>
                 </div>
               ))}
@@ -233,7 +235,7 @@ export default function WeddingBoothPage() {
             <div style={{ padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: 10 }}>
               {bookingTerms.map((term, i) => (
                 <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
-                  <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#0097a7', flexShrink: 0, marginTop: 7 }} />
+                  <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#5ba3ac', flexShrink: 0, marginTop: 7 }} />
                   <span style={{ fontSize: '0.9rem', color: '#1a3a40', lineHeight: 1.65 }} dangerouslySetInnerHTML={{ __html: term.replace(/^(50% non-refundable deposit|Remaining balance|Guest Memory Photo Book|Additional magnet orders|Overtime charges|Contract required)/, '<strong>$1</strong>') }} />
                 </div>
               ))}
@@ -243,11 +245,11 @@ export default function WeddingBoothPage() {
           {/* CTA */}
           <div style={{ textAlign: 'center', padding: '16px 0 8px' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1a3a40', marginBottom: 12 }}>Ready to Book Your Wedding Booth?</h2>
-            <p style={{ fontSize: '0.95rem', color: '#4a7a84', lineHeight: 1.7, marginBottom: 28 }}>
+            <p style={{ fontSize: '0.95rem', color: '#6a8e95', lineHeight: 1.7, marginBottom: 28 }}>
               Reach out and we'll get your date on the calendar.
             </p>
             <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/contact" className="btn" style={{ display: 'inline-block', padding: '15px 36px', background: 'white', color: '#0097a7', fontWeight: 700, fontSize: '1rem', textDecoration: 'none', borderRadius: 12, border: '2px solid #0097a7' }}>
+              <Link href="/contact" className="btn" style={{ display: 'inline-block', padding: '15px 36px', background: 'white', color: '#5ba3ac', fontWeight: 700, fontSize: '1rem', textDecoration: 'none', borderRadius: 12, border: '2px solid #5ba3ac' }}>
                 Book Your Date
               </Link>
               <Link href="/custom/wedding" className="btn" style={{ display: 'inline-block', padding: '15px 36px', background: 'white', color: '#1a3a40', fontWeight: 700, fontSize: '1rem', textDecoration: 'none', borderRadius: 12, border: '2px solid #1a3a40' }}>

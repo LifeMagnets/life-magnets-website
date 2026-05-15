@@ -19,7 +19,7 @@ export default function BoothCircle() {
       startVelocity: 28,
       decay: 0.92,
       origin: { x, y },
-      colors: ['#0097a7', '#26c6da', '#f0b429', '#e8734a', '#ffffff', '#a8cfe0'],
+      colors: ['#5ba3ac', '#7ec4cd', '#e8c46e', '#c8675d', '#ffffff', '#a8cfe0'],
       shapes: ['circle', 'square'],
       scalar: 0.9,
     })

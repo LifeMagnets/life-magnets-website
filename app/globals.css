@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --teal: #0097a7;
-  --teal-light: #26c6da;
+  --teal: #5ba3ac;
+  --teal-light: #7ec4cd;
   --teal-bg: #d4eef5;
   --navy: #1a3a6b;
   --orange: #c0392b;
   --gold: #e8a020;
   --text-dark: #1a3a40;
-  --text-mid: #4a7a84;
+  --text-mid: #6a8e95;
 }
 
 body {
